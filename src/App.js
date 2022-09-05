@@ -10,9 +10,8 @@ function App() {
 
   const handleAddProduct = () => {
     dispatch(addProduct(input));
+    setInput('');
   }
-
-  console.log('products', products)
 
   return (
     <div className="App">
@@ -23,6 +22,10 @@ function App() {
           onChange={(e) => setInput(e.target.value)}
         />
         <button onClick={handleAddProduct}>Add</button>
+      </div>
+
+      <div>
+        {products.map(product => <div>{product}</div>)}
       </div>
     </div>
   );
