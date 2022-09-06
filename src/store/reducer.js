@@ -14,6 +14,23 @@ export default function reducer(state = initialState, action) {
         ...state,
         products: [...state.products, action.payload]
       }
+    case actions.REMOVE_PRODUCT:
+      return {
+        ...state,
+        products: state.products.filter(product => product.id !== action.productId)
+      }
+    case actions.CHECK_PRODUCT:
+
+      return {
+        ...state,
+        products: state.products.map(product => {
+          const newProduct = {...product}
+          if (newProduct.id === action.productId) {
+            newProduct.checked = !newProduct.checked
+          }
+          return newProduct
+        })
+      } 
 
     default:
       return state;
