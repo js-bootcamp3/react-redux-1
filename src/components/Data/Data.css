@@ -1,0 +1,17 @@
+.card-row {
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+  color: #000
+}
+
+.card-row:hover {
+  background-color: rgb(179, 195, 255);
+  cursor: pointer;
+}
+
+.card-item {
+  width: 100%;
+  border: 1px solid #000;
+  padding: 8px 12px;
+}

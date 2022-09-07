@@ -4,3 +4,5 @@ export const ADD_PRODUCT = 'ADD_PRODUCT';
 export const REMOVE_PRODUCT = 'REMOVE_PRODUCT';
 export const CHECK_PRODUCT = 'CHECK_PRODUCT';
 
+export const FETCH_DATA = 'FETCH_DATA';
+export const RECEIVE_DATA = 'RECEIVE_DATA';

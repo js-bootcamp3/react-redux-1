@@ -15,3 +15,8 @@ export const checkProduct = (productId) =>({
   type: actions.CHECK_PRODUCT,
   productId: productId
 })
+
+export const setData = (data) =>({
+  type: actions.RECEIVE_DATA,
+  payload: data
+})

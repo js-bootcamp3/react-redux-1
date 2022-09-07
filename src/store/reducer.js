@@ -1,7 +1,8 @@
 import * as actions from './actionTypes';
 
 const initialState = {
-  products: []
+  products: [],
+  data: []
 }
 
 export default function reducer(state = initialState, action) {
@@ -31,6 +32,12 @@ export default function reducer(state = initialState, action) {
           return newProduct
         })
       } 
+
+    case actions.RECEIVE_DATA: 
+      return {
+        ...state,
+        data: action.payload
+      }
 
     default:
       return state;
