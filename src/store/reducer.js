@@ -4,6 +4,7 @@ const initialState = {
   products: [],
   data: [],
   dataLoading: false,
+  users: []
 }
 
 export default function reducer(state = initialState, action) {
@@ -45,6 +46,12 @@ export default function reducer(state = initialState, action) {
         ...state,
         data: action.payload,
         dataLoading: false
+      }
+
+    case actions.RECEIVE_USERS: 
+      return {
+        ...state,
+        users: action.payload,
       }
 
     default:
