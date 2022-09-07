@@ -2,7 +2,8 @@ import * as actions from './actionTypes';
 
 const initialState = {
   products: [],
-  data: []
+  data: [],
+  dataLoading: false,
 }
 
 export default function reducer(state = initialState, action) {
@@ -33,10 +34,17 @@ export default function reducer(state = initialState, action) {
         })
       } 
 
+    case actions.FETCH_DATA: 
+      return {
+        ...state,
+        dataLoading: true
+      }
+
     case actions.RECEIVE_DATA: 
       return {
         ...state,
-        data: action.payload
+        data: action.payload,
+        dataLoading: false
       }
 
     default:
